@@ -29,5 +29,13 @@ Build steps:
         > saxon -s:callbacks.xml -a:on -o:reference.html
 
 
-Minor revision for DubinsStateSpace support:
-================================================
+Minor revision for DubinsStateSpace:
+====================================
+- The only changes are done in v_repExtOMPL.cpp
+
+- TurningRadius and symmetricity of Dubins Curve should
+  be hardcoded due to the lack of parameter for simExtOMPL_createStateSpace
+  (Line number 513: in v_repExtOMPL.cpp)
+
+- If you have some problem related to 'boost::assign::listof' during compilation with -std=c++0x, 
+  replace 'boost::assign::listof(1)(2)(3)' with std::vector<float>{1,2,3}'
